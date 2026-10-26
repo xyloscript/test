@@ -652,9 +652,11 @@ Arqel.Callbacks.OnSuccess=function()
     fn()
 end
 
-if autoPass then
+if autoPass == true then
     getgenv().SCRIPT_KEY = savedKey
-    if Arqel.Callbacks and Arqel.Callbacks.OnSuccess then Arqel.Callbacks.OnSuccess() end
+    if Arqel.Callbacks and Arqel.Callbacks.OnSuccess then 
+        Arqel.Callbacks.OnSuccess() 
+    end
 else
     Arqel:Launch()
 end
